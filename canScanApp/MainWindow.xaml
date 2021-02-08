@@ -1,0 +1,31 @@
+﻿<Window x:Class="canScanApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:canScanApp"
+        xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
+        WindowState="Maximized"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="#FFFEFF"
+        Title="Can Scan">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="40"></WindowChrome>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid>
+            <Image Source="logo.png" Width="153" Height="153" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,10,0,0"></Image>
+            <Grid Height="40" Background="#433C72" VerticalAlignment="Top">
+                <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Top" HorizontalAlignment="Right" Orientation="Horizontal">
+                    <Button Name="MinimizeButton"  Width="40" Height="40" HorizontalAlignment="Right" BorderThickness="0" Background="Transparent">
+                        <fa:ImageAwesome Icon="Minus" Width="20" Height="20" Foreground="White"></fa:ImageAwesome>
+                    </Button>
+                    <Button Name="CloseButton" Width="40" Height="40" HorizontalAlignment="Right" BorderThickness="0" Background="Transparent">
+                        <fa:ImageAwesome Icon="Times" Width="20" Height="20" Foreground="White"></fa:ImageAwesome>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "canScanApp", "canScanApp\canScanApp.csproj", "{A18AF8B2-1F14-4267-A768-176AF861778C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A18AF8B2-1F14-4267-A768-176AF861778C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A18AF8B2-1F14-4267-A768-176AF861778C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A18AF8B2-1F14-4267-A768-176AF861778C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A18AF8B2-1F14-4267-A768-176AF861778C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {776303E1-A2B7-49B4-AAAE-6D33790B1DB7}
+	EndGlobalSection
+EndGlobal
