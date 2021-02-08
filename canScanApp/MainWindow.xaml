@@ -15,7 +15,7 @@
     </WindowChrome.WindowChrome>
     <Grid>
         <Grid>
-            <Image Source="logo.png" Width="153" Height="153" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,10,0,0"></Image>
+            
             <Grid Height="40" Background="#433C72" VerticalAlignment="Top">
                 <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Top" HorizontalAlignment="Right" Orientation="Horizontal">
                     <Button Name="MinimizeButton"  Width="40" Height="40" HorizontalAlignment="Right" BorderThickness="0" Background="Transparent">
@@ -26,6 +26,33 @@
                     </Button>
                 </StackPanel>
             </Grid>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="79*" />
+                <ColumnDefinition Width="177*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            
+            <Image Source="logo.png" Width="153" Height="153" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10"></Image>
+
+            <StackPanel Grid.Row="1">
+                <StackPanel>
+                    <Button Name="SensorOnButton" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10, 20" Height="100" Background="Transparent" BorderThickness="0">
+                        <fa:ImageAwesome Icon="PowerOff" Foreground="#433C72"></fa:ImageAwesome>
+                    </Button>
+                    <TextBlock Text="ACTIVATE SENSOR" HorizontalAlignment="Center" FontSize="20"/>
+                </StackPanel>
+                <Button Name="ShowJoints" Style="{StaticResource RoundButtonTemplate}" Height="30" Margin="30,10">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Paw" Foreground="White" Margin="10,5"></fa:ImageAwesome>
+                        <TextBlock Text="Show Joints"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>
