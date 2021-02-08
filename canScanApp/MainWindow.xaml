@@ -8,14 +8,13 @@
         WindowState="Maximized"
         ResizeMode="NoResize"
         WindowStyle="None"
-        Background="#FFFEFF"
-        Title="Can Scan">
+        Background="#FFFEFF">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="40"></WindowChrome>
     </WindowChrome.WindowChrome>
     <Grid>
         <Grid>
-            
+
             <Grid Height="40" Background="#433C72" VerticalAlignment="Top">
                 <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Top" HorizontalAlignment="Right" Orientation="Horizontal">
                     <Button Name="MinimizeButton"  Width="40" Height="40" HorizontalAlignment="Right" BorderThickness="0" Background="Transparent">
@@ -29,27 +28,39 @@
         </Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="79*" />
-                <ColumnDefinition Width="177*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="4*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="2*"/>
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="29*"/>
             </Grid.RowDefinitions>
-            
-            <Image Source="logo.png" Width="153" Height="153" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10"></Image>
+
+            <Image Source="logo.png" Width="180" Height="180" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="28,0,28.8,0"></Image>
 
             <StackPanel Grid.Row="1">
                 <StackPanel>
-                    <Button Name="SensorOnButton" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10, 20" Height="100" Background="Transparent" BorderThickness="0">
+                    <Button Name="SensorOnButton" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,0" Height="100" Background="Transparent" BorderThickness="0">
                         <fa:ImageAwesome Icon="PowerOff" Foreground="#433C72"></fa:ImageAwesome>
                     </Button>
                     <TextBlock Text="ACTIVATE SENSOR" HorizontalAlignment="Center" FontSize="20"/>
                 </StackPanel>
-                <Button Name="ShowJoints" Style="{StaticResource RoundButtonTemplate}" Height="30" Margin="30,10">
-                    <StackPanel Orientation="Horizontal">
-                        <fa:ImageAwesome Icon="Paw" Foreground="White" Margin="10,5"></fa:ImageAwesome>
-                        <TextBlock Text="Show Joints"/>
+                <Button Name="ShowJoints" Style="{StaticResource RoundButtonTemplate}" Height="40" Margin="40,30,40,20">
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <fa:ImageAwesome Icon="Paw" Foreground="White" Height="25"></fa:ImageAwesome>
+                        <TextBlock Text="Show Joints" Margin="20,0"/>
+                    </StackPanel>
+                </Button>
+                <Button Name="CaptureData" Style="{StaticResource RoundButtonTemplate}" Height="40" Margin="40,20">
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <fa:ImageAwesome Icon="VideoCamera" Foreground="White" Height="25"></fa:ImageAwesome>
+                        <TextBlock Text="Capture" Margin="20,0"/>
+                    </StackPanel>
+                </Button>
+                <Button Name="ShowInfo" Style="{StaticResource RoundButtonTemplate}" Height="80" Margin="40,20">
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <fa:ImageAwesome Icon="InfoCircle" Foreground="White" Height="25"></fa:ImageAwesome>
+                        <TextBlock Text="Show joint's Information" Width="150" TextWrapping="WrapWithOverflow" Margin="20,0"/>
                     </StackPanel>
                 </Button>
             </StackPanel>
