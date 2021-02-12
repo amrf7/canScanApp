@@ -1,0 +1,92 @@
+﻿<Window x:Class="canScanApp.jointsInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:canScanApp"
+        xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="jointsInfo" 
+        ResizeMode="CanResizeWithGrip"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Normal"
+        Height="450" Width="800">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="40"></WindowChrome>
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <Style x:Key="jointsText"  TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="Magenta"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5">
+            <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Top" HorizontalAlignment="Right" 
+                        Orientation="Horizontal">
+                <Button Name="minimizeWindow" Height="40" Width="40" 
+                    BorderThickness="0" Background="Transparent">
+                    <fa:ImageAwesome Icon="WindowMinimize"  Width="20" Foreground="#433C72"></fa:ImageAwesome>
+                </Button>
+                <Button Name="maximizeWindow" Height="40" Width="40" 
+                    BorderThickness="0" Background="Transparent">
+                    <fa:ImageAwesome Icon="WindowMaximize" Height="20" Width="20"  Foreground="#433C72"></fa:ImageAwesome>
+                </Button>
+                <Button Name="closeWindow" Height="40" Width="40" 
+                    BorderThickness="0" Background="Transparent">
+                    <fa:ImageAwesome Icon="Close" Height="20" Width="20" Foreground="#433C72"></fa:ImageAwesome>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Margin="0 40 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="50*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
+            </Grid.RowDefinitions>
+        
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock Text="Joint's Information" FontSize="30" Margin="20 0"/>
+            </Grid>
+            <StackPanel Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="X:" Grid.Column="1" Style="{StaticResource jointsText}" Margin="0 0 10 0"/>
+                    <TextBlock Name="XValue0" Grid.Column="2" Text="A value" Style="{StaticResource jointsText}" />
+                    <TextBlock Text="Y:" Grid.Column="3" Style="{StaticResource jointsText}" Margin="20 0 10 0"/>
+                    <TextBlock Name="YValue0" Grid.Column="4" Text="A Value"  Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Z:" Grid.Column="5" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="ZValue0" Text="Something"  Grid.Column="6" Style="{StaticResource jointsText}"/>
+                </Grid>
+                <StackPanel Margin="20" >
+                    <TextBlock Text="X:" Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Y:" Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Z:" Style="{StaticResource jointsText}"/>
+                </StackPanel>
+                <StackPanel Margin="20" >
+                    <TextBlock Text="X:" Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Y:" Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Z:" Style="{StaticResource jointsText}"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

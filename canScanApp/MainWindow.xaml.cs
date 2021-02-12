@@ -28,7 +28,7 @@ namespace canScanApp
         private byte[] colorPixels;
 
         bool clickOn = false;
-
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -48,6 +48,12 @@ namespace canScanApp
             {
                 TestText.Text = "Desactivado";
             }
+        }
+
+        private void showJointsInfoWindow(object sender, RoutedEventArgs e)
+        {
+            jointsInfo jointsInfoWindow = new jointsInfo();
+            jointsInfoWindow.Show();
         }
     }
 }

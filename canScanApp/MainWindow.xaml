@@ -14,7 +14,6 @@
     </WindowChrome.WindowChrome>
     <Grid>
         <Grid>
-
             <Grid Height="40" Background="#433C72" VerticalAlignment="Top">
                 <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Top" HorizontalAlignment="Right" Orientation="Horizontal">
                     <Button Name="MinimizeButton"  Width="40" Height="40" HorizontalAlignment="Right" BorderThickness="0" Background="Transparent">
@@ -57,7 +56,7 @@
                         <TextBlock Text="Capture" Margin="20,0"/>
                     </StackPanel>
                 </Button>
-                <Button Name="ShowInfo" Style="{StaticResource RoundButtonTemplate}" Height="80" Margin="40,20">
+                <Button Name="ShowInfo" Click="showJointsInfoWindow" Style="{StaticResource RoundButtonTemplate}" Height="80" Margin="40,20">
                     <StackPanel Orientation="Horizontal" Margin="5">
                         <fa:ImageAwesome Icon="InfoCircle" Foreground="White" Height="25"></fa:ImageAwesome>
                         <TextBlock Text="Show joint's Information" Width="150" TextWrapping="WrapWithOverflow" Margin="20,0"/>
