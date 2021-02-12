@@ -24,3 +24,8 @@ C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\De
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\FontAwesome.WPF.dll
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\FontAwesome.WPF.xml
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\App.baml
+C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\Microsoft.Kinect.dll
+C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\Microsoft.Kinect.Toolkit.Controls.dll
+C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\Microsoft.Kinect.Toolkit.dll
+C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\Microsoft.Kinect.Toolkit.Interaction.dll
+C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\Microsoft.Kinect.xml

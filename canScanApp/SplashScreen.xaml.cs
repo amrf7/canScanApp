@@ -27,7 +27,7 @@ namespace canScanApp
             InitializeComponent();
 
             timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = new TimeSpan(0, 0, 2);
+            timer.Interval = new TimeSpan(0, 0, 10);
             timer.Start();
         }
 

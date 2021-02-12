@@ -32,18 +32,18 @@
                 <ColumnDefinition Width="4*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="12*"/>
-                <RowDefinition Height="29*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Image Source="logo.png" Width="180" Height="180" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="28,0,28.8,0"></Image>
+            <Image Source="logo.png" Width="180" Height="180" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="28,0,28,30"></Image>
 
             <StackPanel Grid.Row="1">
                 <StackPanel>
-                    <Button Name="SensorOnButton" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,0" Height="100" Background="Transparent" BorderThickness="0">
+                    <Button Name="SensorOnButton" Click="turnSensorOn" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,0" Height="100" Background="Transparent" BorderThickness="0">
                         <fa:ImageAwesome Icon="PowerOff" Foreground="#433C72"></fa:ImageAwesome>
                     </Button>
-                    <TextBlock Text="ACTIVATE SENSOR" HorizontalAlignment="Center" FontSize="20"/>
+                    <TextBlock Text="ACTIVATE SENSOR" HorizontalAlignment="Center" FontSize="20" Margin="0 20 0 0"/>
                 </StackPanel>
                 <Button Name="ShowJoints" Style="{StaticResource RoundButtonTemplate}" Height="40" Margin="40,30,40,20">
                     <StackPanel Orientation="Horizontal" Margin="5">
@@ -64,6 +64,11 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
+
+            <Grid Name="KinectImageContainer" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                  Background="Aqua" Margin="50 150 50 0" MinWidth="900" MinHeight="600">
+                <TextBlock Name="TestText" Text="Desactivado" FontSize="30" Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
         </Grid>
     </Grid>
 </Window>
