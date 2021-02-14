@@ -22,11 +22,6 @@ namespace canScanApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private KinectSensor sensor;
-        private WriteableBitmap colorBitmap;
-        private DepthImagePixel[] depthPixels;
-        private byte[] colorPixels;
-
         bool clickOn = false;
         bool captureOpen = false;
         
@@ -61,6 +56,11 @@ namespace canScanApp
 
             CaptureWindow captureWindow = new CaptureWindow();
             captureWindow.ShowDialog();
+        }
+
+        private void showJointsButtonClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Joints are shown");
         }
     }
 }

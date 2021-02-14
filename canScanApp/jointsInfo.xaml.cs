@@ -21,10 +21,7 @@ namespace canScanApp
     /// </summary>
     public partial class jointsInfo : Window {
         public List<String> jointName { get; set; }
-        public double XValue { get; set; }
-        public double YValue { get; set; }
-        public double ZValue { get; set; }
-        Random rand = new Random();
+        
 
         public jointsInfo()
         {
@@ -54,13 +51,28 @@ namespace canScanApp
 
         }
 
-        void item1Selected(object sender, EventArgs e)
+        //generate random number
+        public String RandomDouble2String()
         {
+            Random rand = new Random();
+            double c = rand.NextDouble() * rand.Next(1,50);
+            return c.ToString("0.#####");
+        }
+
+        private void item1Selected(object sender, EventArgs e)
+        {
+            
             if (joint1Selector.IsDropDownOpen == false)
             {
                 checkSelectedJoints(joint1Selector.Text, joint2Selector.Text);
                 checkSelectedJoints(joint1Selector.Text, joint3Selector.Text);
                 showJoint(joint1Selector.Text,visualJoint1);
+                if(joint1Selector.Text != "Select joint...")
+                {
+                    XValue1.Text = RandomDouble2String();
+                    YValue1.Text = RandomDouble2String();
+                    ZValue1.Text = RandomDouble2String();
+                }
             }
         }
 
@@ -71,6 +83,12 @@ namespace canScanApp
                 checkSelectedJoints(joint2Selector.Text, joint1Selector.Text);
                 checkSelectedJoints(joint2Selector.Text, joint3Selector.Text);
                 showJoint(joint2Selector.Text, visualJoint2);
+                if (joint1Selector.Text != "Select joint...")
+                {
+                    XValue2.Text = RandomDouble2String();
+                    YValue2.Text = RandomDouble2String();
+                    ZValue2.Text = RandomDouble2String();
+                }
             }
         }
 
@@ -81,14 +99,23 @@ namespace canScanApp
                 checkSelectedJoints(joint3Selector.Text, joint1Selector.Text);
                 checkSelectedJoints(joint3Selector.Text, joint2Selector.Text);
                 showJoint(joint3Selector.Text, visualJoint3);
+                if (joint1Selector.Text != "Select joint...")
+                {
+                    XValue3.Text = RandomDouble2String();
+                    YValue3.Text = RandomDouble2String();
+                    ZValue3.Text = RandomDouble2String();
+                }
             }
         }
 
         private void checkSelectedJoints(String a, String b)
         {
             if (String.Equals(a, b))
+            {
                 MessageBox.Show("Joint " + a + " is already selected. \n" +
                     "Please choose a different joint.");
+            }
+
         }
 
         private void showJoint(String jointName, Ellipse joint)

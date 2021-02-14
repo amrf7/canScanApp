@@ -18,34 +18,7 @@
         <Style x:Key="jointsText"  TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="Foreground" Value="Magenta"/>
-        </Style>
-        <DataTemplate x:Key="jointSelectorTemplate">
-            <StackPanel>
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="30*"/>
-                        <ColumnDefinition Width="30*"/>
-                        <ColumnDefinition Width="30*"/>
-                        <ColumnDefinition Width="5*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Text="X:" Grid.Column="1" Style="{StaticResource jointsText}"/>
-                    <TextBlock Name="XValue" Text="{Binding XValue}" Grid.Column="1" Margin="20 0 0 0" Style="{StaticResource jointsText}" />
-                    <TextBlock Text="Y:" Grid.Column="2" Style="{StaticResource jointsText}"/>
-                    <TextBlock Name="YValue" Text="{Binding YValue}" Grid.Column="2" Margin="20 0 0 0"  Style="{StaticResource jointsText}"/>
-                    <TextBlock Text="Z:" Grid.Column="3" Style="{StaticResource jointsText}"/>
-                    <TextBlock Name="ZValue" Text="{Binding ZValue}" Grid.Column="3" Margin="20 0 0 0" Style="{StaticResource jointsText}"/>
-                </Grid>
-            </StackPanel>
-        </DataTemplate>
-
-        <Style x:Key="ComboBoxStyle" TargetType="{x:Type ToggleButton}">
-            
+            <Setter Property="Foreground" Value="Black"/>
         </Style>
     </Window.Resources>
     
@@ -83,6 +56,7 @@
                 <TextBlock Text="Joint's Information" FontSize="30" Margin="20 0"/>
             </StackPanel>
             <StackPanel Grid.Row="2" VerticalAlignment="Center">
+                <!--Joint 1-->
                 <ComboBox Name="joint1Selector" 
                           IsEditable="True"
                           IsReadOnly="True"
@@ -92,8 +66,26 @@
                           DropDownClosed="item1Selected"
                           Margin="20" UseLayoutRounding="False" >                   
                 </ComboBox>
-                <ContentPresenter Name="joint1" Margin="10 0"
-                                  ContentTemplate="{StaticResource jointSelectorTemplate}" Content="{Binding}"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="X:" Grid.Column="1" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="XValue1" Grid.Column="1" Margin="20 0 0 0" Style="{StaticResource jointsText}" />
+                    <TextBlock Text="Y:" Grid.Column="2" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="YValue1" Grid.Column="2" Margin="20 0 0 0"  Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Z:" Grid.Column="3" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="ZValue1" Grid.Column="3" Margin="20 0 0 0" Style="{StaticResource jointsText}"/>
+                </Grid>
+                
+                <!--Joint 2-->
                 <ComboBox Name="joint2Selector"
                           IsEditable="True"
                           IsReadOnly="True"
@@ -102,8 +94,26 @@
                           ItemsSource="{Binding jointName}" 
                           DropDownClosed="item2Selected"
                           Margin="20"/>
-                <ContentPresenter Name="joint2" Margin="10 0"
-                                  ContentTemplate="{StaticResource jointSelectorTemplate}" Content="{Binding}"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="X:" Grid.Column="1" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="XValue2" Grid.Column="1" Margin="20 0 0 0" Style="{StaticResource jointsText}" />
+                    <TextBlock Text="Y:" Grid.Column="2" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="YValue2" Grid.Column="2" Margin="20 0 0 0"  Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Z:" Grid.Column="3" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="ZValue2" Grid.Column="3" Margin="20 0 0 0" Style="{StaticResource jointsText}"/>
+                </Grid>
+                
+                <!--Joint 3-->
                 <ComboBox Name="joint3Selector" 
                           IsEditable="True"
                           IsReadOnly="True"
@@ -112,8 +122,25 @@
                           ItemsSource="{Binding jointName}" 
                           DropDownClosed="item3Selected"
                           Margin="20"/>
-                <ContentPresenter Name="joint3" Margin="10 0"
-                                  ContentTemplate="{StaticResource jointSelectorTemplate}" Content="{Binding}"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="X:" Grid.Column="1" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="XValue3" Grid.Column="1" Margin="20 0 0 0" Style="{StaticResource jointsText}" />
+                    <TextBlock Text="Y:" Grid.Column="2" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="YValue3" Grid.Column="2" Margin="20 0 0 0"  Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Z:" Grid.Column="3" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="ZValue3" Grid.Column="3" Margin="20 0 0 0" Style="{StaticResource jointsText}"/>
+                </Grid>
+                
             </StackPanel>
 
             <Grid Name="jointsImage" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -121,17 +148,17 @@
                    Width="300"/>
                 <Ellipse Name="visualJoint1" 
                          Height="10" Width="10"
-                         Fill="Aqua"
+                         Fill="#433C72"
                          Stroke="Transparent"
                          Visibility="Hidden"/>
                 <Ellipse Name="visualJoint2"
                          Height="10" Width="10"
-                         Fill="Aqua"
+                         Fill="#433C72"
                          Stroke="Transparent"
                          Visibility="Hidden"/>
                 <Ellipse Name="visualJoint3" 
                          Height="10" Width="10"
-                         Fill="Aqua"
+                         Fill="#433C72"
                          Stroke="Transparent"
                          Visibility="Hidden"/>
             </Grid>
