@@ -50,9 +50,9 @@
                         <TextBlock Text="Show Joints" Margin="20,0"/>
                     </StackPanel>
                 </Button>
-                <Button Name="CaptureData" Style="{StaticResource RoundButtonTemplate}" Height="40" Margin="40,20">
+                <Button Name="CaptureData" Click="showCaptureWindow" Style="{StaticResource RoundButtonTemplate}" Height="40" Margin="40,20">
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <fa:ImageAwesome Icon="VideoCamera" Foreground="White" Height="25"></fa:ImageAwesome>
+                        <fa:ImageAwesome Icon="VideoCamera" Foreground="White" Width="20"></fa:ImageAwesome>
                         <TextBlock Text="Capture" Margin="20,0"/>
                     </StackPanel>
                 </Button>

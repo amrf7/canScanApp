@@ -28,6 +28,7 @@ namespace canScanApp
         private byte[] colorPixels;
 
         bool clickOn = false;
+        bool captureOpen = false;
         
         public MainWindow()
         {
@@ -54,6 +55,12 @@ namespace canScanApp
         {
             jointsInfo jointsInfoWindow = new jointsInfo();
             jointsInfoWindow.Show();
+        }
+        private void showCaptureWindow(object sender, RoutedEventArgs e)
+        {
+
+            CaptureWindow captureWindow = new CaptureWindow();
+            captureWindow.ShowDialog();
         }
     }
 }

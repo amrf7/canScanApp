@@ -7,7 +7,6 @@
         xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
         mc:Ignorable="d"
         WindowStyle="None"
-        Title="jointsInfo" 
         ResizeMode="CanResizeWithGrip"
         WindowStartupLocation="CenterScreen"
         WindowState="Normal"
@@ -21,72 +20,122 @@
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="Foreground" Value="Magenta"/>
         </Style>
-    </Window.Resources>
-    
-    <Grid>
-        <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5">
-            <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Top" HorizontalAlignment="Right" 
-                        Orientation="Horizontal">
-                <Button Name="minimizeWindow" Height="40" Width="40" 
-                    BorderThickness="0" Background="Transparent">
-                    <fa:ImageAwesome Icon="WindowMinimize"  Width="20" Foreground="#433C72"></fa:ImageAwesome>
-                </Button>
-                <Button Name="maximizeWindow" Height="40" Width="40" 
-                    BorderThickness="0" Background="Transparent">
-                    <fa:ImageAwesome Icon="WindowMaximize" Height="20" Width="20"  Foreground="#433C72"></fa:ImageAwesome>
-                </Button>
-                <Button Name="closeWindow" Height="40" Width="40" 
-                    BorderThickness="0" Background="Transparent">
-                    <fa:ImageAwesome Icon="Close" Height="20" Width="20" Foreground="#433C72"></fa:ImageAwesome>
-                </Button>
-            </StackPanel>
-        </Grid>
-        <Grid Margin="0 40 0 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50*" />
-                <ColumnDefinition Width="50*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="90*"/>
-            </Grid.RowDefinitions>
-        
-            <Grid Grid.Row="1" Grid.ColumnSpan="2">
-                <TextBlock Text="Joint's Information" FontSize="30" Margin="20 0"/>
-            </Grid>
-            <StackPanel Grid.Row="2">
+        <DataTemplate x:Key="jointSelectorTemplate">
+            <StackPanel>
+
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="25*"/>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="25*"/>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
                         <ColumnDefinition Width="5*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="X:" Grid.Column="1" Style="{StaticResource jointsText}" Margin="0 0 10 0"/>
-                    <TextBlock Name="XValue0" Grid.Column="2" Text="A value" Style="{StaticResource jointsText}" />
-                    <TextBlock Text="Y:" Grid.Column="3" Style="{StaticResource jointsText}" Margin="20 0 10 0"/>
-                    <TextBlock Name="YValue0" Grid.Column="4" Text="A Value"  Style="{StaticResource jointsText}"/>
-                    <TextBlock Text="Z:" Grid.Column="5" Style="{StaticResource jointsText}"/>
-                    <TextBlock Name="ZValue0" Text="Something"  Grid.Column="6" Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="X:" Grid.Column="1" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="XValue" Text="{Binding XValue}" Grid.Column="1" Margin="20 0 0 0" Style="{StaticResource jointsText}" />
+                    <TextBlock Text="Y:" Grid.Column="2" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="YValue" Text="{Binding YValue}" Grid.Column="2" Margin="20 0 0 0"  Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Z:" Grid.Column="3" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="ZValue" Text="{Binding ZValue}" Grid.Column="3" Margin="20 0 0 0" Style="{StaticResource jointsText}"/>
                 </Grid>
-                <StackPanel Margin="20" >
-                    <TextBlock Text="X:" Style="{StaticResource jointsText}"/>
-                    <TextBlock Text="Y:" Style="{StaticResource jointsText}"/>
-                    <TextBlock Text="Z:" Style="{StaticResource jointsText}"/>
-                </StackPanel>
-                <StackPanel Margin="20" >
-                    <TextBlock Text="X:" Style="{StaticResource jointsText}"/>
-                    <TextBlock Text="Y:" Style="{StaticResource jointsText}"/>
-                    <TextBlock Text="Z:" Style="{StaticResource jointsText}"/>
-                </StackPanel>
             </StackPanel>
+        </DataTemplate>
+
+        <Style x:Key="ComboBoxStyle" TargetType="{x:Type ToggleButton}">
+            
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" 
+                        Grid.Row="0" Grid.ColumnSpan="3"
+                        VerticalAlignment="Top" HorizontalAlignment="Right" 
+                        Orientation="Horizontal">
+                <Button Name="minimizeWindow" Height="25" Width="40" 
+                    BorderThickness="0" Background="Transparent">
+                    <fa:ImageAwesome Icon="WindowMinimize"  Width="15" Foreground="#433C72"></fa:ImageAwesome>
+                </Button>
+                <Button Name="maximizeWindow" Height="25" Width="40" 
+                    BorderThickness="0" Background="Transparent">
+                    <fa:ImageAwesome Icon="WindowMaximize" Height="15" Width="15"  Foreground="#433C72"></fa:ImageAwesome>
+                </Button>
+                <Button Name="closeWindow" Height="25" Width="40" 
+                    BorderThickness="0" Background="Transparent">
+                    <fa:ImageAwesome Icon="Close" Height="15" Width="15" Foreground="#433C72"></fa:ImageAwesome>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="20">
+                <fa:ImageAwesome Icon="InfoCircle" Foreground="#433C72" Height="25"></fa:ImageAwesome>
+                <TextBlock Text="Joint's Information" FontSize="30" Margin="20 0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" VerticalAlignment="Center">
+                <ComboBox Name="joint1Selector" 
+                          IsEditable="True"
+                          IsReadOnly="True"
+                          Focusable="False"
+                          Text="Select joints..."
+                          ItemsSource="{Binding jointName}" 
+                          DropDownClosed="item1Selected"
+                          Margin="20" UseLayoutRounding="False" >                   
+                </ComboBox>
+                <ContentPresenter Name="joint1" Margin="10 0"
+                                  ContentTemplate="{StaticResource jointSelectorTemplate}" Content="{Binding}"/>
+                <ComboBox Name="joint2Selector"
+                          IsEditable="True"
+                          IsReadOnly="True"
+                          Focusable="False"
+                          Text="Select joints..."
+                          ItemsSource="{Binding jointName}" 
+                          DropDownClosed="item2Selected"
+                          Margin="20"/>
+                <ContentPresenter Name="joint2" Margin="10 0"
+                                  ContentTemplate="{StaticResource jointSelectorTemplate}" Content="{Binding}"/>
+                <ComboBox Name="joint3Selector" 
+                          IsEditable="True"
+                          IsReadOnly="True"
+                          Focusable="False"
+                          Text="Select joints..."
+                          ItemsSource="{Binding jointName}" 
+                          DropDownClosed="item3Selected"
+                          Margin="20"/>
+                <ContentPresenter Name="joint3" Margin="10 0"
+                                  ContentTemplate="{StaticResource jointSelectorTemplate}" Content="{Binding}"/>
+            </StackPanel>
+
+            <Grid Name="jointsImage" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image Source="dog_skeleton.png"
+                   Width="300"/>
+                <Ellipse Name="visualJoint1" 
+                         Height="10" Width="10"
+                         Fill="Aqua"
+                         Stroke="Transparent"
+                         Visibility="Hidden"/>
+                <Ellipse Name="visualJoint2"
+                         Height="10" Width="10"
+                         Fill="Aqua"
+                         Stroke="Transparent"
+                         Visibility="Hidden"/>
+                <Ellipse Name="visualJoint3" 
+                         Height="10" Width="10"
+                         Fill="Aqua"
+                         Stroke="Transparent"
+                         Visibility="Hidden"/>
+            </Grid>
+            
         </Grid>
     </Grid>
 </Window>
