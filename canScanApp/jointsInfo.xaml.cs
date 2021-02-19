@@ -66,6 +66,8 @@ namespace canScanApp
             {
                 checkSelectedJoints(joint1Selector.Text, joint2Selector.Text);
                 checkSelectedJoints(joint1Selector.Text, joint3Selector.Text);
+                checkSelectedJoints(joint1Selector.Text, joint4Selector.Text);
+                checkSelectedJoints(joint1Selector.Text, joint5Selector.Text);
                 showJoint(joint1Selector.Text,visualJoint1);
                 if(joint1Selector.Text != "Select joint...")
                 {
@@ -82,8 +84,10 @@ namespace canScanApp
             {
                 checkSelectedJoints(joint2Selector.Text, joint1Selector.Text);
                 checkSelectedJoints(joint2Selector.Text, joint3Selector.Text);
+                checkSelectedJoints(joint2Selector.Text, joint4Selector.Text);
+                checkSelectedJoints(joint2Selector.Text, joint5Selector.Text);
                 showJoint(joint2Selector.Text, visualJoint2);
-                if (joint1Selector.Text != "Select joint...")
+                if (joint2Selector.Text != "Select joint...")
                 {
                     XValue2.Text = RandomDouble2String();
                     YValue2.Text = RandomDouble2String();
@@ -98,12 +102,50 @@ namespace canScanApp
             {
                 checkSelectedJoints(joint3Selector.Text, joint1Selector.Text);
                 checkSelectedJoints(joint3Selector.Text, joint2Selector.Text);
+                checkSelectedJoints(joint3Selector.Text, joint4Selector.Text);
+                checkSelectedJoints(joint3Selector.Text, joint5Selector.Text);
                 showJoint(joint3Selector.Text, visualJoint3);
-                if (joint1Selector.Text != "Select joint...")
+                if (joint3Selector.Text != "Select joint...")
                 {
                     XValue3.Text = RandomDouble2String();
                     YValue3.Text = RandomDouble2String();
                     ZValue3.Text = RandomDouble2String();
+                }
+            }
+        }
+
+        private void item4Selected(object sender, EventArgs e)
+        {
+            if (joint4Selector.IsDropDownOpen == false)
+            {
+                checkSelectedJoints(joint4Selector.Text, joint1Selector.Text);
+                checkSelectedJoints(joint4Selector.Text, joint2Selector.Text);
+                checkSelectedJoints(joint4Selector.Text, joint3Selector.Text);
+                checkSelectedJoints(joint4Selector.Text, joint5Selector.Text);
+                showJoint(joint4Selector.Text, visualJoint4);
+                if (joint4Selector.Text != "Select joint...")
+                {
+                    XValue4.Text = RandomDouble2String();
+                    YValue4.Text = RandomDouble2String();
+                    ZValue4.Text = RandomDouble2String();
+                }
+            }
+        }
+
+        private void item5Selected(object sender, EventArgs e)
+        {
+            if (joint5Selector.IsDropDownOpen == false)
+            {
+                checkSelectedJoints(joint5Selector.Text, joint1Selector.Text);
+                checkSelectedJoints(joint5Selector.Text, joint2Selector.Text);
+                checkSelectedJoints(joint5Selector.Text, joint3Selector.Text);
+                checkSelectedJoints(joint5Selector.Text, joint4Selector.Text);
+                showJoint(joint5Selector.Text, visualJoint5);
+                if (joint4Selector.Text != "Select joint...")
+                {
+                    XValue5.Text = RandomDouble2String();
+                    YValue5.Text = RandomDouble2String();
+                    ZValue5.Text = RandomDouble2String();
                 }
             }
         }
@@ -123,37 +165,37 @@ namespace canScanApp
             switch (jointName)
             {
                 case "Head":
-                    joint.Margin = new Thickness(62, 56, 228, 254);
+                    joint.Margin = new Thickness(73, 65, 267, 298.6);
                     break;
                 case "Neck":
-                    joint.Margin = new Thickness(100,120,190,190);
+                    joint.Margin = new Thickness(117, 142, 223, 221.6);
                     break;
                 case "Frontal right leg":
-                    joint.Margin = new Thickness(89,196,201,114);
+                    joint.Margin = new Thickness(102, 229, 233, 134.4);
                     break;
                 case "Frontal left leg":
-                    joint.Margin = new Thickness(128,208,162,102);
+                    joint.Margin = new Thickness(148, 245, 187, 118.4);
                     break;
                 case "Rear left leg":
-                    joint.Margin = new Thickness(240,182,50,128);
+                    joint.Margin = new Thickness(279, 211, 56, 152.4);
                     break;
                 case "Rear right leg":
-                    joint.Margin = new Thickness(204,173,86,137);
+                    joint.Margin = new Thickness(236, 203, 99, 160.4);
                     break;
                 case "Tail base":
-                    joint.Margin = new Thickness(216, 113, 74, 197);
+                    joint.Margin = new Thickness(250, 134, 85, 229.4);
                     break;
                 case "Frontal left paw":
-                    joint.Margin = new Thickness(121, 300, 169, 10);
+                    joint.Margin = new Thickness(142, 353, 193, 10.4);
                     break;
                 case "Frontal right paw":
-                    joint.Margin = new Thickness(78, 272, 212, 38);
+                    joint.Margin = new Thickness(91, 320, 244, 43.4);
                     break;
                 case "Rear left paw":
-                    joint.Margin = new Thickness(260, 252, 30, 58);
+                    joint.Margin = new Thickness(303, 295, 32, 68.4);
                     break;
                 case "Rear right paw":
-                    joint.Margin = new Thickness(219, 236, 71, 74);
+                    joint.Margin = new Thickness(252, 277, 83, 86.4);
                     break;
                 default:
                     joint.Visibility = Visibility.Hidden;
