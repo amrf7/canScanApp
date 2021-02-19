@@ -10,7 +10,7 @@
         ResizeMode="CanResizeWithGrip"
         WindowStartupLocation="CenterScreen"
         WindowState="Normal"
-        Height="450" Width="800">
+        Height="670" Width="850">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="40"></WindowChrome>
     </WindowChrome.WindowChrome>
@@ -20,13 +20,19 @@
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="Foreground" Value="Black"/>
         </Style>
+        <Style x:Key="joint" TargetType="Ellipse">
+            <Setter Property="Width" Value="12"/>
+            <Setter Property="Height" Value="12"/>
+            <Setter Property="Fill" Value="#433C72"/>
+            <Setter Property="Stroke" Value="Transparent"/>
+        </Style>
     </Window.Resources>
-    
+
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50*"/>
-                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="403*"/>
+                <ColumnDefinition Width="490*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
@@ -34,9 +40,9 @@
             </Grid.RowDefinitions>
 
             <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" 
-                        Grid.Row="0" Grid.ColumnSpan="3"
+                        Grid.Row="0"
                         VerticalAlignment="Top" HorizontalAlignment="Right" 
-                        Orientation="Horizontal">
+                        Orientation="Horizontal" Grid.Column="1" Height="25" Margin="0,0,-0.4,0" Width="120">
                 <Button Name="minimizeWindow" Height="25" Width="40" 
                     BorderThickness="0" Background="Transparent">
                     <fa:ImageAwesome Icon="WindowMinimize"  Width="15" Foreground="#433C72"></fa:ImageAwesome>
@@ -51,11 +57,11 @@
                 </Button>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="20">
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="20,20,24.2,19.8">
                 <fa:ImageAwesome Icon="InfoCircle" Foreground="#433C72" Height="25"></fa:ImageAwesome>
                 <TextBlock Text="Joint's Information" FontSize="30" Margin="20 0"/>
             </StackPanel>
-            <StackPanel Grid.Row="2" VerticalAlignment="Center">
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" Height="540" Margin="0,0.2,4.2,22.2">
                 <!--Joint 1-->
                 <ComboBox Name="joint1Selector" 
                           IsEditable="True"
@@ -64,27 +70,25 @@
                           Text="Select joints..."
                           ItemsSource="{Binding jointName}" 
                           DropDownClosed="item1Selected"
-                          Margin="20" UseLayoutRounding="False" >                   
+                          Margin="20" UseLayoutRounding="False" >
                 </ComboBox>
-                <Grid>
+                <Grid Margin="20 0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"/>
                         <ColumnDefinition Width="30*"/>
                         <ColumnDefinition Width="30*"/>
                         <ColumnDefinition Width="30*"/>
-                        <ColumnDefinition Width="5*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="X:" Grid.Column="1" Style="{StaticResource jointsText}"/>
-                    <TextBlock Name="XValue1" Grid.Column="1" Margin="20 0 0 0" Style="{StaticResource jointsText}" />
-                    <TextBlock Text="Y:" Grid.Column="2" Style="{StaticResource jointsText}"/>
-                    <TextBlock Name="YValue1" Grid.Column="2" Margin="20 0 0 0"  Style="{StaticResource jointsText}"/>
-                    <TextBlock Text="Z:" Grid.Column="3" Style="{StaticResource jointsText}"/>
-                    <TextBlock Name="ZValue1" Grid.Column="3" Margin="20 0 0 0" Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="X:" Grid.Column="0" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="XValue1" Grid.Column="0" Margin="20 0 0 0" Style="{StaticResource jointsText}" />
+                    <TextBlock Text="Y:" Grid.Column="1" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="YValue1" Grid.Column="1" Margin="20 0 0 0"  Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Z:" Grid.Column="2" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="ZValue1"  Grid.Column="2" Margin="20 0 0 0" Style="{StaticResource jointsText}"/>
                 </Grid>
-                
+
                 <!--Joint 2-->
                 <ComboBox Name="joint2Selector"
                           IsEditable="True"
@@ -112,7 +116,7 @@
                     <TextBlock Text="Z:" Grid.Column="3" Style="{StaticResource jointsText}"/>
                     <TextBlock Name="ZValue2" Grid.Column="3" Margin="20 0 0 0" Style="{StaticResource jointsText}"/>
                 </Grid>
-                
+
                 <!--Joint 3-->
                 <ComboBox Name="joint3Selector" 
                           IsEditable="True"
@@ -140,29 +144,85 @@
                     <TextBlock Text="Z:" Grid.Column="3" Style="{StaticResource jointsText}"/>
                     <TextBlock Name="ZValue3" Grid.Column="3" Margin="20 0 0 0" Style="{StaticResource jointsText}"/>
                 </Grid>
-                
+
+                <!--Joint 4-->
+                <ComboBox Name="joint4Selector" 
+                          IsEditable="True"
+                          IsReadOnly="True"
+                          Focusable="False"
+                          Text="Select joints..."
+                          ItemsSource="{Binding jointName}" 
+                          DropDownClosed="item4Selected"
+                          Margin="20"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="X:" Grid.Column="1" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="XValue4" Grid.Column="1" Margin="20 0 0 0" Style="{StaticResource jointsText}" />
+                    <TextBlock Text="Y:" Grid.Column="2" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="YValue4" Grid.Column="2" Margin="20 0 0 0"  Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Z:" Grid.Column="3" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="ZValue4" Grid.Column="3" Margin="20 0 0 0" Style="{StaticResource jointsText}"/>
+                </Grid>
+
+                <!--Joint 3-->
+                <ComboBox Name="joint5Selector" 
+                          IsEditable="True"
+                          IsReadOnly="True"
+                          Focusable="False"
+                          Text="Select joints..."
+                          ItemsSource="{Binding jointName}" 
+                          DropDownClosed="item5Selected"
+                          Margin="20"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="X:" Grid.Column="1" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="XValue5" Grid.Column="1" Margin="20 0 0 0" Style="{StaticResource jointsText}" />
+                    <TextBlock Text="Y:" Grid.Column="2" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="YValue5" Grid.Column="2" Margin="20 0 0 0"  Style="{StaticResource jointsText}"/>
+                    <TextBlock Text="Z:" Grid.Column="3" Style="{StaticResource jointsText}"/>
+                    <TextBlock Name="ZValue5" Grid.Column="3" Margin="20 0 0 0" Style="{StaticResource jointsText}"/>
+                </Grid>
+
             </StackPanel>
 
-            <Grid Name="jointsImage" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Image Source="dog_skeleton.png"
-                   Width="300"/>
+            <Grid Name="jointsImage" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="48.8,57.2,41.6,79.2" Width="350">
+                <Image Source="dog_skeleton.png"
+                   Width="350"/>
                 <Ellipse Name="visualJoint1" 
-                         Height="10" Width="10"
-                         Fill="#433C72"
-                         Stroke="Transparent"
+                         Style="{StaticResource joint}"
                          Visibility="Hidden"/>
                 <Ellipse Name="visualJoint2"
-                         Height="10" Width="10"
-                         Fill="#433C72"
-                         Stroke="Transparent"
+                         Style="{StaticResource joint}"
                          Visibility="Hidden"/>
                 <Ellipse Name="visualJoint3" 
-                         Height="10" Width="10"
-                         Fill="#433C72"
-                         Stroke="Transparent"
+                         Style="{StaticResource joint}"
+                         Visibility="Hidden"/>
+                <Ellipse Name="visualJoint4" 
+                         Style="{StaticResource joint}"
+                         Visibility="Hidden"/>
+                <Ellipse Name="visualJoint5"
+                         Style="{StaticResource joint}"
                          Visibility="Hidden"/>
             </Grid>
-            
+
         </Grid>
     </Grid>
 </Window>

@@ -83,9 +83,6 @@
     <Compile Include="CaptureWindow.xaml.cs">
       <DependentUpon>CaptureWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CombobozTest1.xaml.cs">
-      <DependentUpon>CombobozTest1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControl\CustomComboBox.xaml.cs">
       <DependentUpon>CustomComboBox.xaml</DependentUpon>
     </Compile>
@@ -96,10 +93,6 @@
       <DependentUpon>SplashScreen.xaml</DependentUpon>
     </Compile>
     <Page Include="CaptureWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CombobozTest1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -23,7 +23,6 @@ namespace canScanApp
     public partial class MainWindow : Window
     {
         bool clickOn = false;
-        bool captureOpen = false;
         
         public MainWindow()
         {
