@@ -31,8 +31,5 @@ C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\De
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\Microsoft.Kinect.xml
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\jointsInfo.g.cs
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\jointsInfo.baml
-C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\UserControl\CustomComboBox.g.cs
-C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\UserControl\CustomComboBox.baml
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\CaptureWindow.g.cs
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\CaptureWindow.baml
