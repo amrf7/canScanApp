@@ -379,9 +379,6 @@
             </ControlTemplate.Triggers>
         </ControlTemplate>
         <Style x:Key="BoxRadius" TargetType="{x:Type ComboBox}">
-            <Setter Property="Background" Value="{StaticResource ComboBox.Static.Background}" />
-            <Setter Property="BorderBrush" Value="{StaticResource ComboBox.Static.Border}" />
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
             <Setter Property="BorderThickness" Value="1" />
             <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
             <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
@@ -587,12 +584,43 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Label
-                    Grid.Row="0" Grid.Column="0"
-                    FontSize="14"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
-                    Content="Clip duration: " 
-                    Height="30"/>
+                        Grid.Row="0" Grid.Column="0"
+                        FontSize="14"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Content="Clip duration: " 
+                        Height="30"/>
+                <StackPanel Orientation="Horizontal"
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Margin="5 0">
+                    
+                    <TextBox
+                        Width="100"
+                        Height="20"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Style="{DynamicResource TextBoxStyleRound}"
+                        TextChanged="TextBox_TextChanged_1"
+                        TextWrapping="Wrap" PreviewTextInput="Textboxx" Grid.Column="1" />
+                    <Label Content="s" FontSize="14"
+                           VerticalAlignment="Center"
+                           Margin="5 0"/>
+                    <TextBox
+                        x:Name="textbox1"
+                        Width="100"
+                        Height="20"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Style="{DynamicResource TextBoxStyleRound}"
+                        TextWrapping="Wrap" PreviewTextInput="Textbooxx" />
+                    <Label Content="ms" FontSize="14"
+                           VerticalAlignment="Center"
+                           Margin="5 0"/>
+                </StackPanel>
+                
                 <Label
                     Grid.Row="1" Grid.Column="0"
                     FontSize="14"
@@ -601,25 +629,18 @@
                     Content="File type: " 
                     Height="30"/>
                 <ComboBox
+                    Name="fileType"
                     Grid.Row="1" Grid.Column="1"
                     Width="190"
                     Height="20"
                     Text="Select..."
+                    SelectedValuePath="Content"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Style="{DynamicResource BoxRadius}" Margin="45,24,62,24">
-                    <ComboBoxItem Content="Excel (.xlsx)"/>
-                    <ComboBoxItem Content="Bloc de notas (.txt)"/>
+                    Style="{DynamicResource BoxRadius}">
+                    <ComboBoxItem Content="Excel Worksheets (*.xls;*.xlsx)"/>
+                    <ComboBoxItem Content="Bloc de notas (*.txt)"/>
                 </ComboBox>
-                <TextBlock Name="timeGiven" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Holaaaaaa!"/>
-                <ListBox
-                    Grid.Row="0" Grid.Column="1"
-                    Width="190"
-                    Height="23"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Style="{DynamicResource ComboRadius}" Margin="45,22,62,22" />
-
             </Grid>
             <Button
                 Grid.Row="2"
