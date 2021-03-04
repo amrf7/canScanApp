@@ -22,7 +22,7 @@ namespace canScanApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool clickOn = false;
+        bool clickOnSensor = false, clickJoints = false;
         
         public MainWindow()
         {
@@ -34,8 +34,8 @@ namespace canScanApp
 
         private void turnSensorOn(object sender, RoutedEventArgs e)
         {
-            clickOn = !clickOn;
-            if (clickOn)
+            clickOnSensor = !clickOnSensor;
+            if (clickOnSensor)
             {
                 TestText.Text = "Activado";
             }
@@ -59,7 +59,15 @@ namespace canScanApp
 
         private void showJointsButtonClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Joints are shown");
+            clickJoints = !clickJoints;
+            if (clickJoints)
+            {
+                MessageBox.Show("Joints are shown");
+            } else
+            {
+                MessageBox.Show("Joints are not shown");
+            }
+            
         }
     }
 }

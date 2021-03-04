@@ -65,7 +65,7 @@
             </StackPanel>
 
             <Grid Name="KinectImageContainer" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" 
-                  Background="Aqua" Margin="50 150 50 0" MinWidth="900" MinHeight="600">
+                  Background="#FFC1B8FD" Margin="50 150 50 0" MinWidth="900" MinHeight="600">
                 <TextBlock Name="TestText" Text="Desactivado" FontSize="30" Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
         </Grid>

@@ -64,16 +64,22 @@ namespace canScanApp
             
             if (joint1Selector.IsDropDownOpen == false)
             {
-                checkSelectedJoints(joint1Selector.Text, joint2Selector.Text);
-                checkSelectedJoints(joint1Selector.Text, joint3Selector.Text);
-                checkSelectedJoints(joint1Selector.Text, joint4Selector.Text);
-                checkSelectedJoints(joint1Selector.Text, joint5Selector.Text);
-                showJoint(joint1Selector.Text,visualJoint1);
-                if(joint1Selector.Text != "Select joint...")
+                bool check = checkSelectedJoints(joint1Selector, joint1Selector.Text, joint2Selector.Text);
+                check = check | checkSelectedJoints(joint1Selector, joint1Selector.Text, joint3Selector.Text);
+                check = check | checkSelectedJoints(joint1Selector, joint1Selector.Text, joint4Selector.Text);
+                check = check | checkSelectedJoints(joint1Selector, joint1Selector.Text, joint5Selector.Text);
+                
+                if(joint1Selector.Text != "Select joints..." & !check)
                 {
+                    showJoint(joint1Selector.Text, visualJoint1);
                     XValue1.Text = RandomDouble2String();
                     YValue1.Text = RandomDouble2String();
                     ZValue1.Text = RandomDouble2String();
+                } else
+                {
+                    XValue1.Text = "";
+                    YValue1.Text = "";
+                    ZValue1.Text = "";
                 }
             }
         }
@@ -82,16 +88,22 @@ namespace canScanApp
         {
             if (joint2Selector.IsDropDownOpen == false)
             {
-                checkSelectedJoints(joint2Selector.Text, joint1Selector.Text);
-                checkSelectedJoints(joint2Selector.Text, joint3Selector.Text);
-                checkSelectedJoints(joint2Selector.Text, joint4Selector.Text);
-                checkSelectedJoints(joint2Selector.Text, joint5Selector.Text);
-                showJoint(joint2Selector.Text, visualJoint2);
-                if (joint2Selector.Text != "Select joint...")
+                bool check = checkSelectedJoints(joint2Selector, joint2Selector.Text, joint1Selector.Text);
+                check = check | checkSelectedJoints(joint2Selector, joint2Selector.Text, joint3Selector.Text);
+                check = check | checkSelectedJoints(joint2Selector, joint2Selector.Text, joint4Selector.Text);
+                check = check | checkSelectedJoints(joint2Selector, joint2Selector.Text, joint5Selector.Text);
+                
+                if (joint2Selector.Text != "Select joints..." & !check)
                 {
+                    showJoint(joint2Selector.Text, visualJoint2);
                     XValue2.Text = RandomDouble2String();
                     YValue2.Text = RandomDouble2String();
                     ZValue2.Text = RandomDouble2String();
+                } else
+                {
+                    XValue2.Text = "";
+                    YValue2.Text = "";
+                    ZValue2.Text = "";
                 }
             }
         }
@@ -100,16 +112,22 @@ namespace canScanApp
         {
             if (joint3Selector.IsDropDownOpen == false)
             {
-                checkSelectedJoints(joint3Selector.Text, joint1Selector.Text);
-                checkSelectedJoints(joint3Selector.Text, joint2Selector.Text);
-                checkSelectedJoints(joint3Selector.Text, joint4Selector.Text);
-                checkSelectedJoints(joint3Selector.Text, joint5Selector.Text);
-                showJoint(joint3Selector.Text, visualJoint3);
-                if (joint3Selector.Text != "Select joint...")
+                bool check = checkSelectedJoints(joint3Selector, joint3Selector.Text, joint1Selector.Text);
+                check = check | checkSelectedJoints(joint3Selector, joint3Selector.Text, joint2Selector.Text);
+                check = check | checkSelectedJoints(joint3Selector, joint3Selector.Text, joint4Selector.Text);
+                check = check | checkSelectedJoints(joint3Selector, joint3Selector.Text, joint5Selector.Text);
+
+                if (joint3Selector.Text != "Select joints..." & !check)
                 {
+                    showJoint(joint3Selector.Text, visualJoint3);
                     XValue3.Text = RandomDouble2String();
                     YValue3.Text = RandomDouble2String();
                     ZValue3.Text = RandomDouble2String();
+                } else
+                {
+                    XValue3.Text = "";
+                    YValue3.Text = "";
+                    ZValue3.Text = "";
                 }
             }
         }
@@ -118,16 +136,22 @@ namespace canScanApp
         {
             if (joint4Selector.IsDropDownOpen == false)
             {
-                checkSelectedJoints(joint4Selector.Text, joint1Selector.Text);
-                checkSelectedJoints(joint4Selector.Text, joint2Selector.Text);
-                checkSelectedJoints(joint4Selector.Text, joint3Selector.Text);
-                checkSelectedJoints(joint4Selector.Text, joint5Selector.Text);
-                showJoint(joint4Selector.Text, visualJoint4);
-                if (joint4Selector.Text != "Select joint...")
+                bool check = checkSelectedJoints(joint4Selector, joint4Selector.Text, joint1Selector.Text);
+                check = check | checkSelectedJoints(joint4Selector, joint4Selector.Text, joint2Selector.Text);
+                check = check | checkSelectedJoints(joint4Selector, joint4Selector.Text, joint3Selector.Text);
+                check = check | checkSelectedJoints(joint4Selector, joint4Selector.Text, joint5Selector.Text);
+                
+                if (joint4Selector.Text != "Select joints..." & !check)
                 {
+                    showJoint(joint4Selector.Text, visualJoint4);
                     XValue4.Text = RandomDouble2String();
                     YValue4.Text = RandomDouble2String();
                     ZValue4.Text = RandomDouble2String();
+                } else
+                {
+                    XValue4.Text = "";
+                    YValue4.Text = "";
+                    ZValue4.Text = "";
                 }
             }
         }
@@ -136,27 +160,38 @@ namespace canScanApp
         {
             if (joint5Selector.IsDropDownOpen == false)
             {
-                checkSelectedJoints(joint5Selector.Text, joint1Selector.Text);
-                checkSelectedJoints(joint5Selector.Text, joint2Selector.Text);
-                checkSelectedJoints(joint5Selector.Text, joint3Selector.Text);
-                checkSelectedJoints(joint5Selector.Text, joint4Selector.Text);
-                showJoint(joint5Selector.Text, visualJoint5);
-                if (joint4Selector.Text != "Select joint...")
+                bool check = checkSelectedJoints(joint5Selector, joint5Selector.Text, joint1Selector.Text);
+                check = check | checkSelectedJoints(joint5Selector, joint5Selector.Text, joint2Selector.Text);
+                check = check | checkSelectedJoints(joint5Selector, joint5Selector.Text, joint3Selector.Text);
+                check = check | checkSelectedJoints(joint5Selector, joint5Selector.Text, joint4Selector.Text);
+                
+                if (joint4Selector.Text != "Select joints..." & !check)
                 {
+                    showJoint(joint5Selector.Text, visualJoint5);
                     XValue5.Text = RandomDouble2String();
                     YValue5.Text = RandomDouble2String();
                     ZValue5.Text = RandomDouble2String();
+                } else
+                {
+                    XValue5.Text = "";
+                    YValue5.Text = "";
+                    ZValue5.Text = "";
                 }
             }
         }
 
-        private void checkSelectedJoints(String a, String b)
+        private bool checkSelectedJoints(ComboBox jointSelector, String a, String b)
         {
-            if (String.Equals(a, b))
+            if (String.Equals(a, b) & !String.Equals(a, "Select joints..."))
             {
                 MessageBox.Show("Joint " + a + " is already selected. \n" +
                     "Please choose a different joint.");
+                jointSelector.SelectedItem = null;
+                jointSelector.Text = "Select joints...";
+                return true;
             }
+
+            return false;
 
         }
 

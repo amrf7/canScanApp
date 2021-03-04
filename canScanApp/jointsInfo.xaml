@@ -42,7 +42,7 @@
             <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" 
                         Grid.Row="0"
                         VerticalAlignment="Top" HorizontalAlignment="Right" 
-                        Orientation="Horizontal" Grid.Column="1" Height="25" Margin="0,0,-0.4,0" Width="120">
+                        Orientation="Horizontal" Grid.Column="1" Height="25" Margin="0 5" Width="120">
                 <Button Name="minimizeWindow" Height="25" Width="40" 
                     BorderThickness="0" Background="Transparent">
                     <fa:ImageAwesome Icon="WindowMinimize"  Width="15" Foreground="#433C72"></fa:ImageAwesome>
