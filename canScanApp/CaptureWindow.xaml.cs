@@ -69,5 +69,10 @@ namespace canScanApp
         {
             e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
         }
+
+        private void fileType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

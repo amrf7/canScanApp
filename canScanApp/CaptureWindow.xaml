@@ -639,7 +639,7 @@
                     SelectedValuePath="Content"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Style="{DynamicResource BoxRadius}">
+                    Style="{DynamicResource BoxRadius}" SelectionChanged="fileType_SelectionChanged">
                     <ComboBoxItem Content="Excel Worksheets (*.xls;*.xlsx)"/>
                     <ComboBoxItem Content="Bloc de notas (*.txt)"/>
                 </ComboBox>

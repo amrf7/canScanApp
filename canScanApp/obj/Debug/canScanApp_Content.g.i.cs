@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dog_skeleton.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("canscan.svg")]
 
 

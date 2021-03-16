@@ -2,13 +2,9 @@ C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\De
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\canScanApp.exe
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\canScanApp.pdb
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\canScanApp.csprojAssemblyReference.cache
-C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\MainWindow.g.cs
-C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\splashScreen.g.cs
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\App.g.cs
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\canScanApp_MarkupCompile.cache
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\canScanApp_MarkupCompile.lref
-C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\MainWindow.baml
-C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\splashScreen.baml
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\canScanApp.g.resources
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\canScanApp.Properties.Resources.resources
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\canScanApp.csproj.GenerateResource.cache
@@ -29,7 +25,11 @@ C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\De
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\Microsoft.Kinect.Toolkit.dll
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\Microsoft.Kinect.Toolkit.Interaction.dll
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\bin\Debug\Microsoft.Kinect.xml
+C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\CaptureWindow.g.cs
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\jointsInfo.g.cs
+C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\MainWindow.g.cs
+C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\SplashScreen.g.cs
+C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\CaptureWindow.baml
 C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\jointsInfo.baml
-C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\CaptureWindow.g.cs
-C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\canScanApp\canScanApp\obj\Debug\CaptureWindow.baml
+C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\MainWindow.baml
+C:\Users\Home\Documents\UDLAP\2021\servicio\canScan\CanScanApp\canScanApp\obj\Debug\SplashScreen.baml
